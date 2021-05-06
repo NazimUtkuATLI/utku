@@ -1,0 +1,44 @@
+window.store
+{dispatch: ƒ, subscribe: ƒ, getState: ƒ, replaceReducer: ƒ, Symbol(observable): ƒ}
+store
+{dispatch: ƒ, subscribe: ƒ, getState: ƒ, replaceReducer: ƒ, Symbol(observable): ƒ}
+store.getState()
+(2) [{…}, {…}]0: {name: "serkan"}1: {name: "utku"}length: 2__proto__: Array(0)
+const actionData = window.addUser()
+undefined
+actionData
+{type: "ADD_USER", payload: {…}}payload: {name: "ilkay"}type: "ADD_USER"__proto__: Object
+store.dispatch(actionData)
+{type: "ADD_USER", payload: {…}}
+store.getState()
+(3) [{…}, {…}, {…}]0: {name: "serkan"}1: {name: "utku"}2: {name: "ilkay"}length: 3__proto__: Array(0)
+function subscriber() {
+ console.log(store.getState());
+}
+undefined
+function subscriber() {
+ console.log(store.getState());
+}
+undefined
+function subscriber() {
+ console.log("calling subscriber");
+
+ console.log(store.getState());
+}
+undefined
+store.subscribe(subscriber)
+ƒ unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      if (isDispatching) {
+        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. '…
+store.dispatch(actionData)
+VM196:2 calling subscriber
+VM196:4 (4) [{…}, {…}, {…}, {…}]
+{type: "ADD_USER", payload: {…}}
+store.dispatch(actionData)
+VM196:2 calling subscriber
+VM196:4 (5) [{…}, {…}, {…}, {…}, {…}]
+{type: "ADD_USER", payload: {…}}

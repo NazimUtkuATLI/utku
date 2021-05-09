@@ -1,7 +1,7 @@
 const express = require("express");
 
 const app = express();
-
+const asd = 2;
 app.get("/api/customers", (req, res) => {
 	const customers = [
 		{
